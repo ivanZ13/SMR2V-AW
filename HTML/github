@@ -1,0 +1,51 @@
+orge@aula102-100:~$ git clone https://github.com/JorgeDuenasLerin/mi-super-web.git
+Clonando en 'mi-super-web'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (3/3), listo.
+jorge@aula102-100:~$ cd mi-super-web/
+jorge@aula102-100:~/mi-super-web$ ñs
+ñs: orden no encontrada
+jorge@aula102-100:~/mi-super-web$ ls
+README.md
+jorge@aula102-100:~/mi-super-web$ echo "Hola mudno" > index.html
+jorge@aula102-100:~/mi-super-web$ ls
+index.html  README.md
+jorge@aula102-100:~/mi-super-web$ cat index.html 
+Hola mudno
+jorge@aula102-100:~/mi-super-web$ echo "Hola mundo" > index.html 
+jorge@aula102-100:~/mi-super-web$ cat index.html                
+Hola mundo
+jorge@aula102-100:~/mi-super-web$ git add .
+jorge@aula102-100:~/mi-super-web$ git commit -m 'Añadir índice'
+
+*** Por favor cuéntame quien eres.
+
+Corre
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Tu Nombre"
+
+para configurar la identidad por defecto de tu cuenta.
+Omite --global para configurar tu identidad solo en este repositorio.
+
+fatal: no es posible auto-detectar la dirección de correo (se obtuvo 'jorge@aula102-100.(none)')
+jorge@aula102-100:~/mi-super-web$ git config --global user.email "jorge.duenas.lerin@gmail.com"
+jorge@aula102-100:~/mi-super-web$ git config --global user.name "JorgeDuenasLerin"
+jorge@aula102-100:~/mi-super-web$ git commit -m 'Añadir índice'
+[master 79e77f8] Añadir índice
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+jorge@aula102-100:~/mi-super-web$ git push
+Username for 'https://github.com': JorgeDuenasLerin
+Password for 'https://JorgeDuenasLerin@github.com': 
+Contando objetos: 3, listo.
+Delta compression using up to 4 threads.
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (3/3), 306 bytes | 306.00 KiB/s, listo.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/JorgeDuenasLerin/mi-super-web.git
+   735b5ee..79e77f8  master -> master
+jorge@aula102-100:~/mi-super-web$ 
